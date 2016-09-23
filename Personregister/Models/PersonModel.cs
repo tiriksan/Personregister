@@ -13,8 +13,10 @@ namespace Personregister.Models
             PersonServiceClient client = new PersonServiceClient();
             client.ClientCredentials.UserName.UserName = "test";
             client.ClientCredentials.UserName.Password = "BF32511";
+
             LookupParameters lookupParameter = new LookupParameters();
             lookupParameter.NIN = NIN;
+
             var person = client.GetPerson(lookupParameter);
 
             client.Close();
