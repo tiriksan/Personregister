@@ -15,7 +15,8 @@ namespace Personregister.Tests
             var json = controller.GetPersonByNIN("01090097365");
 
             Assert.IsTrue(json.Length > 0);
-            
+            Assert.IsTrue(json.Contains("\"NIN\":\"01090097365\""));
+            Assert.IsTrue(json.Contains("\"GivenName\":\"MOHAMMED HATEM\""));
         }
     }
 }

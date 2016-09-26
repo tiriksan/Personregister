@@ -17,9 +17,42 @@ namespace Personregister.Tests
 
             var person = model.GetPerson(testPerson.NIN);
 
-            Assert.AreEqual(testPerson.NIN, "01090097365");
-            Assert.AreEqual(person.NIN, testPerson.NIN);
-            Assert.AreEqual(person.GivenName, testPerson.GivenName);
+            Assert.AreEqual("01090097365", testPerson.NIN);
+            Assert.AreEqual(testPerson.NIN, person.NIN);
+            Assert.AreEqual(testPerson.GivenName, person.GivenName);
+        }
+
+        [TestMethod]
+        public void GetPerson_NIN21058047691_ReturnsPerson()
+        {
+            PersonModel model = new PersonModel();
+
+            var person = model.GetPerson("21058047691");
+
+            Assert.AreEqual(person.NIN, "21058047691");
+            Assert.AreEqual("ELLA CHRISTINE", person.GivenName);
+        }
+
+        [TestMethod]
+        public void GetPerson_NIN13049544221_ReturnsPerson()
+        {
+            PersonModel model = new PersonModel();
+
+            var person = model.GetPerson("13049544221");
+
+            Assert.AreEqual("13049544221", person.NIN);
+            Assert.AreEqual("ELIN MONICA", person.GivenName);
+        }
+
+        [TestMethod]
+        public void GetPerson_NIN25065041963_ReturnsPerson()
+        {
+            PersonModel model = new PersonModel();
+
+            var person = model.GetPerson("25065041963");
+
+            Assert.AreEqual("25065041963", person.NIN);
+            Assert.AreEqual("EIVIND OTTO", person.GivenName);
         }
 
         [TestMethod]
