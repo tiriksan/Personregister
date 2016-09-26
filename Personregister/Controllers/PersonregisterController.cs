@@ -1,12 +1,5 @@
 ﻿using Personregister.Models;
-using Personregister.PersonServiceReference;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Description;
 
 namespace Personregister.Controllers
 {
@@ -25,23 +18,30 @@ namespace Personregister.Controllers
         }
 
         [HttpGet]
+        [Route("{id}")]
+        public string GetPersonByNIN(string id)
+        {
+            var person = PersonModel.GetPerson(id);
+
+            if (person == null)
+            {
+                return "";
+            }
+
+            var jsonPerson = PersonModel.ConvertPersonToJSON(person);
+
+            return jsonPerson;
+        }
+
+        [HttpGet]
         [Route("")]
         public IHttpActionResult Index()
         {
             return Ok("Index");
         }
 
-        [Route("{id:int}")]
-        public IHttpActionResult GetPersonByNIN(string NIN)
-        {
-            var person = PersonModel.GetPerson(NIN);
 
-            if(person == null)
-            {
-                return NotFound();
-            }
 
-            return Ok(person) ;
-        }
+        
     }
 }

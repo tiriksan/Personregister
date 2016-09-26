@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <None Include="Service References\PersonServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\PersonServiceReference\configuration.svcinfo" />
     <Content Include="Service References\PersonServiceReference\Personregister.PersonServiceReference.Address.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -118,18 +120,11 @@
     <Content Include="Service References\PersonServiceReference\Personregister.PersonServiceReference.SearchResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\PersonServiceReference\PersonService.disco" />
-    <None Include="Service References\PersonServiceReference\configuration91.svcinfo" />
-    <None Include="Service References\PersonServiceReference\configuration.svcinfo" />
     <None Include="Service References\PersonServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Web.config" />
-    <None Include="Service References\PersonServiceReference\PersonService.wsdl" />
-    <None Include="Service References\PersonServiceReference\PersonService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -149,6 +144,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <None Include="Service References\PersonServiceReference\PersonService.wsdl" />
     <None Include="Service References\PersonServiceReference\PersonService.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -156,6 +152,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PersonServiceReference\PersonService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonServiceReference\PersonService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
