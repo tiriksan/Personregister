@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\personregister %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\personregister.pubxml" />
     <None Include="Service References\PersonServiceReference\configuration91.svcinfo" />
     <None Include="Service References\PersonServiceReference\configuration.svcinfo" />
     <Content Include="Service References\PersonServiceReference\Personregister.PersonServiceReference.Address.datasource">
@@ -129,6 +131,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonregisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

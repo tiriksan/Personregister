@@ -25,7 +25,7 @@ namespace Personregister.Controllers
 
             if (person == null)
             {
-                return "";
+                return "Not found";
             }
 
             var jsonPerson = PersonModel.ConvertPersonToJSON(person);
@@ -37,7 +37,7 @@ namespace Personregister.Controllers
         [Route("")]
         public IHttpActionResult Index()
         {
-            return Ok("Index");
+            return Ok("Enter a NIN in the url after api/personregister/. I.e. api/personregister/01090097365");
         }
 
 
