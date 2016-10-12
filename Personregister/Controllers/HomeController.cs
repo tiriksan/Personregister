@@ -11,7 +11,7 @@ namespace Personregister.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return Redirect("api/personregister");
+            return View();
         }
     }
 }
