@@ -12,7 +12,6 @@ namespace Personregister
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/Personregister")
-            .IncludeDirectory("~/Scripts/Controllers", "*.js")
             .Include("~/Scripts/Personregister.js"));
 
         }

@@ -1,14 +1,17 @@
 ﻿<!DOCTYPE html>
-<html ng-app="Personregister" ng-controller="LandingPageController">
+<html ng-app="Personregister">
 <head>
-    <title ng-bind="models.helloAngular"></title>
+    <title>Personregister</title>
 </head>
 <body>
-
-    <input type="text" ng-model="models.helloAngular" />
-    <div> {{models.helloAngular}}
-    </div>
-
+    <form name="mainForm" data-ng-submit="sendForm()" data-ng-controller="LandingPageController" novalidate>
+        <input ng-model="models.NIN" type="text" />
+        <button type="submit" >Submit</button>
+        <div>
+            {{model.result}}
+        </div>
+    </form>
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
     @Scripts.Render("~/bundles/Personregister")
     

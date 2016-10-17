@@ -123,7 +123,6 @@
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\personregister %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\personregister.pubxml" />
-    <Content Include="Scripts\Controllers\LandingPageController.js" />
     <Content Include="Scripts\Personregister.js" />
     <None Include="Service References\PersonServiceReference\configuration91.svcinfo" />
     <None Include="Service References\PersonServiceReference\configuration.svcinfo" />
